@@ -1,8 +1,15 @@
 # docker-nginx-envproxy
 
- quick, env var configurable Nginx reverse proxy to swiss-army knife your way to greatness!
+## Overview
+quick'n'easy, environment variable configurable nginx reverse proxy to swiss-army knife your way to greatness!
 
- should handle everything from basic REST APIs to streaming LLMs, WebSockets, and seekable video content.
+should handle everything from basic REST APIs to streaming LLMs, WebSockets, and seekable video content.
+
+good luck, have fun.
+
+## Environment Variables
+- `TARGET_HOST`: Target service hostname or IP (default: `localhost`).
+- `TARGET_PORT`: Target service port (default: `80`).
 
 ## Quick Start
 
