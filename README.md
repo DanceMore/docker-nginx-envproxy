@@ -8,8 +8,16 @@ should handle everything from basic REST APIs to streaming LLMs, WebSockets, and
 good luck, have fun.
 
 ## Environment Variables
-- `TARGET_HOST`: Target service hostname or IP (default: `localhost`).
-- `TARGET_PORT`: Target service port (default: `80`).
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `TARGET_HOST` | `localhost` | Backend hostname or IP |
+| `TARGET_PORT` | `80` | Backend port |
+| `PROXY_TIMEOUT` | `60s` | Connection timeout |
+| `PROXY_BUFFERING` | `on` | Enable/disable response buffering |
+| `CLIENT_MAX_BODY_SIZE` | `1m` | Maximum request body size |
+| `LARGE_CLIENT_HEADER_BUFFERS` | `4 8k` | Buffer size for large headers |
+| `PROXY_FORCE_RANGES` | `off` | Force byte-range support for media |
 
 ## Quick Start
 
@@ -132,18 +140,6 @@ docker-compose up
 - Container IPs are stable within the same Docker network
 - Docker Compose handles service name resolution automatically
 - Avoids DNS configuration issues and timeouts
-
-## Environment Variables
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `TARGET_HOST` | `localhost` | Backend hostname or IP |
-| `TARGET_PORT` | `80` | Backend port |
-| `PROXY_TIMEOUT` | `60s` | Connection timeout |
-| `PROXY_BUFFERING` | `on` | Enable/disable response buffering |
-| `CLIENT_MAX_BODY_SIZE` | `1m` | Maximum request body size |
-| `LARGE_CLIENT_HEADER_BUFFERS` | `4 8k` | Buffer size for large headers |
-| `PROXY_FORCE_RANGES` | `off` | Force byte-range support for media |
 
 ## Simple & Reliable
 
